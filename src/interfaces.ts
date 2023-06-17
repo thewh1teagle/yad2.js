@@ -1,3 +1,34 @@
+export interface ContactResponse {
+  api_version: number
+  data: Data
+  status_code: number
+  error_message: any
+  server_number: number
+}
+
+interface Data {
+  contact_name: string
+  phone_numbers: PhoneNumber[]
+  favorites_userid: string
+  is_virtual_phone: IsVirtualPhone
+  email: boolean
+}
+
+interface PhoneNumber {
+  title: string
+  link: string
+}
+
+interface IsVirtualPhone {
+  support_sms: boolean
+}
+
+
+
+
+
+
+
 export interface SearchResponse {
   data: Data
   message: string
@@ -9,7 +40,7 @@ enum orderType {
   expensiveToCheap=4
 }
 
-export interface Data {
+interface Data {
   feed: Feed
   title: string
   filters: Filter[]
@@ -18,7 +49,7 @@ export interface Data {
   left_column: boolean
 }
 
-export interface Feed {
+interface Feed {
   cat_id: number
   subcat_id: number
   title_text: string
@@ -39,13 +70,13 @@ export interface Feed {
   sales_cat_id: string
 }
 
-export interface SortValue {
+interface SortValue {
   title: string
   value: number
   selected: number
 }
 
-export interface FeedItem {
+interface FeedItem {
   line_1?: string
   line_2?: string
   line_3: any
@@ -124,7 +155,7 @@ export interface FeedItem {
   title?: string
 }
 
-export interface Images {
+interface Images {
   Image1: Image1
   Image2?: Image2
   Image3?: Image3
@@ -133,93 +164,93 @@ export interface Images {
   Image6?: Image6
 }
 
-export interface Image1 {
+interface Image1 {
   src: string
 }
 
-export interface Image2 {
+interface Image2 {
   src: string
 }
 
-export interface Image3 {
+interface Image3 {
   src: string
 }
 
-export interface Image4 {
+interface Image4 {
   src: string
 }
 
-export interface Image5 {
+interface Image5 {
   src: string
 }
 
-export interface Image6 {
+interface Image6 {
   src: string
 }
 
-export interface Coordinates {
+interface Coordinates {
   latitude: number
   longitude: number
 }
 
-export interface BreadCrumb {
+interface BreadCrumb {
   title: string
   link?: string
 }
 
-export interface SearchParams {
+interface SearchParams {
   salesCatID: number
   salesSubCatID: number
   salesSubCat3ID: number
   area: number
 }
 
-export interface SeoParams {
+interface SeoParams {
   totalAdCount: number
 }
 
-export interface AssociatedLink {
+interface AssociatedLink {
   title_text: string
   url: string
 }
 
-export interface FeedLiteral {
+interface FeedLiteral {
   category: Category[]
   item: Item[]
   type: Type[]
   topArea: TopArea[]
 }
 
-export interface Category {
+interface Category {
   title: string
   engTitle: string
   id: number
 }
 
-export interface Item {
+interface Item {
   title: string
   engTitle: string
   id: number
 }
 
-export interface Type {
+interface Type {
   title: string
   engTitle: string
   id: number
 }
 
-export interface TopArea {
+interface TopArea {
   title: string
   id: number
 }
 
-export interface Filter {
+interface Filter {
   title: string
   value: number
   selected: number
 }
 
-export interface Pagination {
+interface Pagination {
   current_page: number
   items_in_current_page: number
   last_page: number
