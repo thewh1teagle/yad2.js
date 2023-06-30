@@ -1,19 +1,26 @@
 {
   "name": "yad2.js",
-  "version": "1.0.4",
-  "description": "",
-  "main": "dist/index.js",
-  "keywords": [],
-  "author": "",
+  "version": "1.1.3",
+  "author": "thewh1teagle",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thewh1teagle/yad2.js"
+  },
+  "description": "unofficial type safe API for yad2.co.il",
+  "keywords": ["scraping", "yad2", "israel", "axios", "http"],
   "license": "ISC",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  },
   "devDependencies": {
     "@types/node": "^20.3.1",
     "nodemon": "^2.0.22",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.3"
   },
-  "dependencies": {
-    "axios": "^1.4.0"
-  },
+  "main": "dist/index.js",
   "files": ["/dist"]
 }

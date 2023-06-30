@@ -46,7 +46,7 @@ export async function getContact(itemId: string) {
         'sec-ch-ua-platform': '"Windows"',
         'uzlc': 'true'
     }
-    const response = await axios.get(`https://www.yad2.co.il/api/item/ueiksr22/contactinfo?id=${itemId}&isPlatinum=false`, { headers });
+    const response = await axios.get(`https://www.yad2.co.il/api/item/${itemId}/contactinfo?id=${itemId}&isPlatinum=false`, { headers });
     const responseData = response.data as ContactResponse
     return { responseData, response }
 }

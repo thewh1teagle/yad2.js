@@ -43,3 +43,7 @@ console.log(responseData.data) // TypeScript friendly!
 - ✅ TypeScript friendly
 - 🍃 Super Lightweight
 - 🚀 Fast
+
+
+#### Todo
+Solve Captches using [2captcha](https://www.npmjs.com/package/2captcha)

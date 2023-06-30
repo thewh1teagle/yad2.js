@@ -12,6 +12,6 @@
     "typescript": "^5.1.3"
   },
   "dependencies": {
-    "yad2.js": "^1.0.4"
+    "yad2.js": "^1.1.2"
   }
 }

@@ -1,8 +1,8 @@
-import {getItems} from 'yad2.js'
+import {feedSearch} from 'yad2.js'
 
 async function main() {
     const url = 'https://gw.yad2.co.il/feed-search-legacy/products/cellular?category=5&area=7&price=-1-2000&forceLdLoad=true'
-    const res = await getItems(url)
+    const res = await feedSearch(url)
     const items = res.responseData.data.feed.feed_items
     const pagination = res.responseData.data.pagination
     console.log('Status => ', res.responseData.message)
