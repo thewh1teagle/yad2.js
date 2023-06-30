@@ -9,7 +9,7 @@ npm i yad2.js
 ```
 
 #### Usage
-1. Head over to https://yad2.co.il/ (or https://www.yad2.co.il/realestate/forsale/map?z=10 for map view)
+1. Head over to https://yad2.co.il/
 2. Search for something
 3. Apply filters as you wish
 4. Copy the following into the console. every time you apply filter - you will get the complete URL
@@ -30,7 +30,7 @@ npm i yad2.js
     };
 })();
 ```
-5. Copy the URL and use it
+1. Copy the URL and use it
 ```ts
 import { feedSearch } from 'yad2.js'
 
