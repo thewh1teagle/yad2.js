@@ -1,3 +1,6 @@
+
+// contact search
+
 export interface ContactResponse {
   api_version: number
   data: Data
@@ -28,8 +31,9 @@ interface IsVirtualPhone {
 
 
 
+// feed search
 
-export interface SearchResponse {
+export interface FeedResponse {
   data: Data
   message: string
 }
@@ -256,4 +260,51 @@ interface Pagination {
   last_page: number
   max_items_per_page: number
   total_items: number
+}
+
+
+// map
+
+export interface MapFeedResponse {
+  feed: MapFeed
+  address: any
+  yad1Listing: any[]
+  paginator: any
+}
+
+export interface MapFeed {
+  cat_id: number
+  subcat_id: number
+  title_text: string
+  sort_values: SortValue[]
+  feed_items: any[]
+  feed_imp: any[]
+  current_page: number
+  page_size: number
+  total_pages: number
+  total_items: number
+  favorites_userid: string
+  can_filter_results: boolean
+  search_params: any[]
+  isCached: boolean
+  server_number: number
+  cacheKey: string
+  media: any
+  footer: MapFooter
+  breadCrumbs: any
+  header_text: string
+  seo_follow: boolean
+  seo_index: boolean
+  canonical: any
+  meta_title: any
+}
+
+export interface MapSortValue {
+  title: string
+  value: number
+  selected: number
+}
+
+export interface MapFooter {
+  links: string[]
 }
