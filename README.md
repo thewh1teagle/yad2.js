@@ -9,26 +9,15 @@ npm i yad2.js
 ```
 
 #### Usage
-1. Head over to https://yad2.co.il/
+1. Head over to https://yad2.co.il
 2. Search for something
 3. Apply filters as you wish
-4. Copy the following into the console. every time you apply filter - you will get the complete URL
+4. Copy the following into the console. every time you apply filter - you will get the complete `URL`
 ```js
-(() => {
-    // Save a reference to the original open method
-    var originalOpen = XMLHttpRequest.prototype.open;
-  
-    // Override the open method
-    XMLHttpRequest.prototype.open = function(method, url) {
-      // Check if the URL contains pattern 
-      if (/\/feed-search-legacy|\/api\/feed\//.test(url)) {
-        alert("Copy this URL: " + url);
-      }
-  
-      // Call the original open method
-      originalOpen.apply(this, arguments);
-    };
-})();
+XMLHttpRequest.prototype.open = (method, url) => {
+  if (/\/feed-search-legacy|\/api\/feed\//.test(url)) alert("Copy this URL: " + url)
+  else originalOpen.apply(this, arguments)
+}
 ```
 1. Copy the URL and use it
 ```ts
